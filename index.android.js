@@ -1,1 +1,1 @@
-import './js/base/app'
+import './js/base/PTRootStackNavigator'
