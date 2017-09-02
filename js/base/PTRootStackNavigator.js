@@ -6,8 +6,6 @@ import {
 
 const DrawContent = require('./PTRootDrawerNavigator');
 
-const RightButton = () => (<Button title={'点击'}/>)
-
 const PaoTuiWang = DrawContent.drawContent;
 
 AppRegistry.registerComponent('PaoTuiWang', () => PaoTuiWang);

@@ -5,7 +5,7 @@ import {
     Image
 } from 'react-native'
 
-export default class PTMainView extends React.Component {
+export default class PTMainView extends Component {
     static navigationOptions = {
         drawerLabel: 'Home',
         drawerIcon: ({ tintColor }) => (
@@ -19,7 +19,7 @@ export default class PTMainView extends React.Component {
     render() {
         return (
             <Button
-                onPress={() => this.props.navigation.navigate('DrawerOpen')}
+                onPress={() => this.props.navigation.navigate('Notifications')}
                 title="Go to notifications"
             />
         );

@@ -22,7 +22,7 @@ const nav_PTMainView = StackNavigator({
             }
         }
     },
-})
+});
 const nav_PTPersonView = StackNavigator({
     Home: {
         screen: PTPersonView,
