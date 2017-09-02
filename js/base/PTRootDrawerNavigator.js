@@ -16,7 +16,7 @@ const nav_PTMainView = StackNavigator({
         screen: PTMainView,
         navigationOptions: {
             headerTitle: 'PTMainView',
-            headerLeft: RightButton(PTMainView),
+            headerLeft: RightButton(this),
             headerTitleStyle: {
                 alignSelf:'center'
             }
@@ -28,7 +28,7 @@ const nav_PTPersonView = StackNavigator({
         screen: PTPersonView,
         navigationOptions: {
             headerTitle: 'PTPersonView',
-            headerLeft: RightButton(PTPersonView),
+            headerLeft: RightButton(this),
             headerTitleStyle: {
                 alignSelf:'center'
             }
