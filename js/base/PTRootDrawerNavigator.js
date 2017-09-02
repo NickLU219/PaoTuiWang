@@ -1,17 +1,48 @@
+import React from 'react'
 import {
-    DrawerNavigator
+    Button
+} from 'react-native'
+import {
+    DrawerNavigator,
+    StackNavigator
 } from 'react-navigation';
 import PTMainView from '../modules/main/PTMainView'
 import PTPersonView from '../modules/main/PTPersonView'
 
+const RightButton = (screen) => (<Button title={'点击'} onPress={() => this.props.navigation.navigate('DrawerOpen')}/>)
+
+const nav_PTMainView = StackNavigator({
+    Home: {
+        screen: PTMainView,
+        navigationOptions: {
+            headerTitle: 'PTMainView',
+            headerLeft: RightButton(PTMainView),
+            headerTitleStyle: {
+                alignSelf:'center'
+            }
+        }
+    },
+})
+const nav_PTPersonView = StackNavigator({
+    Home: {
+        screen: PTPersonView,
+        navigationOptions: {
+            headerTitle: 'PTPersonView',
+            headerLeft: RightButton(PTPersonView),
+            headerTitleStyle: {
+                alignSelf:'center'
+            }
+        }
+    },
+})
 
 const DrawContent = DrawerNavigator(
     {
         Home: {
-            screen: PTMainView,
+            screen: nav_PTMainView,
         },
         Notifications: {
-            screen: PTPersonView,
+            screen: nav_PTPersonView,
         }
     },
     {
